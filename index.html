@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src * data: gap: https://ssl.gstatic.com 'unsafe-eval';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        script-src 'self' 'unsafe-inline' 'unsafe-eval' *;
+        connect-src 'self' 'unsafe-inline' 'unsafe-eval' blob: ws: *;
+        ">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+       <meta name="viewport" content="height=device-height,width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,minimal-ui"/>
+        
+       <link rel="stylesheet" href="css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css?25">
+        <title>Rumbalpuy Dhäwu</title>
+    </head>
+    <body>
+     
+       
+        <div id="appHolder" class="nonbounce">
+         
+         
+         
+           <!----------------------------------------------------------------DEVICE READY-->
+           <div id="deviceready" class="screen"><div class="event listening">Connecting!</div>
+			   <div class="event received">Launching<br><br></div></div>
+         
+         
+         <!----------------------------------------------------------------LAUNCH-->
+			<div id="launch" class="screen">
+				<img src="images/logo_splash.png" class="launchlogo" alt="Logo"></div>
+         
+         
+          
+          <!----------------------------------------------------------------LANGUAGE SCREEN-->
+           <div id="language" class="screen invisible">
+			   <div class="languageHeader paddedContent"><h1>Rumbalpuy Dhäwu</h1></div>
+			   <div class="languageSubHeader paddedContent"><h2>Which language do you want to hear?</h2></div>
+				<div class="languageBody paddedContent">
+					<div class="button marginBottom langButton" id="lan2_Djamb">Dhuwal</div>
+					<div class="button marginBottom langButton" id="lan2_Gum">Dhuwala</div>
+					<div class="button marginBottom langButton" id="lan2_Dha">Dhaŋu</div>
+					<p>&nbsp;</p>
+					<!--<div id="languageBtn" class="button greenButton clearBoth">OK</div>-->
+			   </div>
+			   <div class="languageFooter paddedContent centred">
+			   		(You can always change this language later)
+			   </div>
+          </div>
+           
+         <!----------------------------------------------------------------GENDER SCREEN-->
+           <div id="gender" class="screen invisible">
+			   <div class="languageHeader paddedContent"><h1>Rumbalpuy Dhäwu</h1></div>
+			   <div class="languageSubHeader paddedContent"><h2>Which dictionary do you want to open?</h2></div>
+				<div class="languageBody paddedContent">
+					<div class="button genderButton" id="gen2_All">Bukmakku / For everybody</div>
+					<div class="button marginTop  genderButton" id="gen2_Men">Ḏirramuw / For men only</div>
+					<div class="menuBodyItemCode" id="maleCodeHolder2">
+						<input type="password" placeholder="password?" id="maleCode2">
+						<div class="menuBodyItemCodeOK" id="maleCodeOK2">OK</div>
+						<div class="clearBoth"></div>
+					</div>
+					
+					<div class="button marginTop genderButton" id="gen2_Wom">Miyalkku / For women only</div>
+					<div class="menuBodyItemCode" id="femaleCodeHolder2">
+						<input type="password" placeholder="password?" id="femaleCode2">
+						<div class="menuBodyItemCodeOK" id="femaleCodeOK2">OK</div>
+						<div class="clearBoth"></div>
+					</div>
+					
+			   </div>
+			   <div class="languageFooter paddedContent centred">
+			   		Please contact ARDS at feedback@ards.com.au or on <a href="tel:0889844174">(08) 8984 4174</a> for passwords.
+			   </div>
+          </div>
+			 
+          <!----------------------------------------------------------------DASHBOARD SCREEN-->
+           <div id="dashboard" class="screen invisible">
+			<div class="screenHeader">
+				<div class="headerLeft menuButton"><img src="images/icon-menu.png" class="menuButtonIcon" title="Menu" alt="3 lines">
+					<span class="backtomap invisible"><img src="images/icon-left.png" title="Back" alt="Back"></span>
+				</div>
+				<div class="headerCentre">
+					<img src="images/icon-search.png" title="Search" alt="Magnifying glass">
+					<div class="headerSearchBox"><input type="text" placeholder="Search" class="searchInput"></div>
+				</div>
+				<div class="headerRight langmenuButton"><img src="images/icon-lang.png" title="Change language" alt="3 people"><div class="langFlag"></div></div>
+				<div class="div3 clearBoth"><div class="headerSubmenu headerPictureSearch"><img src="images/icon-body.png" title="Picture search" alt=""></div></div>
+				<div class="div3"><div class="headerSubmenu headerListSearch"><img src="images/icon-list.png" title="List all" alt=""></div></div>
+				<div class="div3"><div class="headerSubmenu headerCategorySearch"><img src="images/icon-tag.png" title="Category search" alt=""></div></div>
+			</div>
+			<div class="screenBody">
+				<div id="bodyMapBoth" class="bodyMapDiv">
+					<img src="images/body-outline-both.png" alt="" usemap="#bodymap" class="bodyMapImage">
+					 <map name="bodymap">
+                      <area class="areaM" shape="rect" coords="114,11,294,175" href="#head" alt="Head" id="bodyMMF0">
+                      <area class="areaM" shape="rect" coords="113,181,278,273" href="#uppertorso" alt="uppertorso" id="bodyMMF10">
+                      <area class="areaM" shape="rect" coords="114,272,277,375" href="#middletorso" alt="middletorso" id="bodyMMF9">
+                      <area class="areaM" shape="rect" coords="118,377,265,561" href="#lowertorso" alt="lowertorso" id="bodyMMF8">
+                      <area class="areaM" shape="rect" coords="8,183,113,478" href="#arm1" alt="arm1" id="bodyMMF13">
+                      <area class="areaM" shape="rect" coords="285,219,349,507" href="#arm2" alt="arm2" id="bodyMFF13">
+                      <area class="areaM" shape="rect" coords="1,479,99,611" href="#" alt="hand1" id="bodyMMF14">
+                      <area class="areaM" shape="rect" coords="299,514,363,626" href="#" alt="hand2" id="bodyMFF14">
+					  <area class="areaM" shape="rect" coords="78,616,161,902" href="#leg1" alt="leg1" id="bodyMMF12">
+                      <area class="areaM" shape="rect" coords="197,567,298,905" href="#leg2" alt="leg2" id="bodyMFF12">
+                      <area class="areaM" shape="rect" coords="40,902,145,1009" href="#foot1" alt="foot1" id="bodyMMF11">
+                      <area class="areaM" shape="rect" coords="196,904,321,1012" href="#foot2" alt="foot2" id="bodyMFF11">
+                      <area class="areaF" shape="rect" coords="456,27,607,164" href="#head" alt="Head" id="bodyMF_0">
+				      <area class="areaF" shape="rect" coords="466,171,566,288" href="#uppertorso" alt="uppertorso" id="bodyMF_10">
+				      <area class="areaF" shape="rect" coords="390,208,445,495" href="#arm" alt="arm1" id="bodyMF_13">
+				      <area class="areaF" shape="rect" coords="370,502,431,603" href="#hand" alt="hand1" id="bodyMF_14">
+				      <area class="areaF" shape="rect" coords="456,290,570,408" href="#middle" alt="middletorso" id="bodyMF_9">
+				      <area class="areaF" shape="rect" coords="457,413,574,551" href="#lower" alt="lowertorso" id="bodyMF_8">
+				      <area class="areaF" shape="rect" coords="573,194,646,492" href="#arm" alt="arm2" id="bodyMF113">
+				      <area class="areaF" shape="rect" coords="605,501,652,609" href="#hand" alt="hand2" id="bodyMF114">
+				      <area class="areaF" shape="rect" coords="411,607,511,875" href="#leg" alt="leg1" id="bodyMF_12">
+				      <area class="areaF" shape="rect" coords="528,554,601,822" href="#leg" alt="leg1" id="bodyMF112">
+				      <area class="areaF" shape="rect" coords="384,883,471,992" href="#foot" alt="foot1" id="bodyMF_11">
+				      <area class="areaF" shape="rect" coords="522,834,600,999" href="#foot" alt="foot1" id="bodyMF111">
+                    </map>
+				</div>
+				<div id="bodyMapMale" class="bodyMapDiv">
+				  <img src="images/body-outline-male.png" alt="" usemap="#bodymapM" class="bodyMapImage">
+				  <map name="bodymapM">
+                      <area class="areaM" shape="rect" coords="114,11,294,175" href="#head" alt="Head" id="bodyMMM0">
+                      <area class="areaM" shape="rect" coords="113,181,278,273" href="#uppertorso" alt="uppertorso" id="bodyMMM10">
+                      <area class="areaM" shape="rect" coords="114,272,277,375" href="#middletorso" alt="middletorso" id="bodyMMM9">
+                      <area class="areaM" shape="rect" coords="118,377,265,561" href="#lowertorso" alt="lowertorso" id="bodyMMM8">
+                      <area class="areaM" shape="rect" coords="8,183,113,478" href="#arm1" alt="arm1" id="bodyMMM13">
+                      <area class="areaM" shape="rect" coords="285,219,349,507" href="#arm2" alt="arm2" id="bodyMM_13">
+                      <area class="areaM" shape="rect" coords="1,479,99,611" href="#" alt="hand1" id="bodyMMM14">
+                      <area class="areaM" shape="rect" coords="299,514,363,626" href="#" alt="hand2" id="bodyMM_14">
+					  <area class="areaM" shape="rect" coords="78,616,161,902" href="#leg1" alt="leg1" id="bodyMMM12">
+                      <area class="areaM" shape="rect" coords="197,567,298,905" href="#leg2" alt="leg2" id="bodyMM_12">
+                      <area class="areaM" shape="rect" coords="40,902,145,1009" href="#foot1" alt="foot1" id="bodyMMM11">
+                      <area class="areaM" shape="rect" coords="196,904,321,1012" href="#foot2" alt="foot2" id="bodyMM_11">
+                    </map>
+				</div>
+				<div id="bodyMapFemale" class="bodyMapDiv">
+				  <img src="images/body-outline-female.png" alt="" usemap="#bodymapF" class="bodyMapImage">
+				  <map name="bodymapF">
+                      <area class="areaF" shape="rect" coords="114,11,294,175" href="#head" alt="Head" id="bodyMap0">
+                      <area class="areaF" shape="rect" coords="113,181,278,273" href="#uppertorso" alt="uppertorso" id="bodyMap10">
+                      <area class="areaF" shape="rect" coords="114,272,277,375" href="#middletorso" alt="middletorso" id="bodyMap9">
+                      <area class="areaF" shape="rect" coords="118,377,265,561" href="#lowertorso" alt="lowertorso" id="bodyMap8">
+                      <area class="areaF" shape="rect" coords="8,183,113,478" href="#arm1" alt="arm1" id="bodyMap13">
+                      <area class="areaF" shape="rect" coords="285,219,349,507" href="#arm2" alt="arm2" id="bodyMpp13">
+                      <area class="areaF" shape="rect" coords="1,479,99,611" href="#" alt="hand1" id="bodyMap14">
+                      <area class="areaF" shape="rect" coords="299,514,363,626" href="#" alt="hand2" id="bodyMpp14">
+					  <area class="areaF" shape="rect" coords="78,616,161,902" href="#leg1" alt="leg1" id="bodyMap12">
+                      <area class="areaF" shape="rect" coords="197,567,298,905" href="#leg2" alt="leg2" id="bodyMpp12">
+                      <area class="areaF" shape="rect" coords="40,902,145,1009" href="#foot1" alt="foot1" id="bodyMap11">
+                      <area class="areaF" shape="rect" coords="196,904,321,1012" href="#foot2" alt="foot2" id="bodyMpp11">
+                    </map>
+				</div>
+			</div>
+			   <!--<div class="screenFooter">
+				   <div class="halfItem switchOn" id="switchMale">Male</div>
+				   <div class="halfItem switchOff" id="switchFemale">Female</div>
+			   </div>-->
+          </div>
+			
+			
+			 <!----------------------------------------------------------------BODY MAP HEAD-->
+           <div id="bodyMapHead" class="screen invisible">
+			<div class="screenHeader">
+				<div class="headerLeft backtomap"><img src="images/icon-left.png" title="Back" alt="Back"></div>
+				<div class="headerCentre">
+					<img src="images/icon-search.png" title="Search" alt="Magnifying glass">
+					<div class="headerSearchBox"><input type="text" placeholder="Search" class="searchInput"></div>
+				</div>
+				<div class="headerRight langmenuButton"><img src="images/icon-lang.png" title="Change language" alt="3 people"><div class="langFlag"></div></div>
+				<div class="div3 clearBoth"><div class="headerSubmenu headerPictureSearch"><img src="images/icon-body.png" title="Picture search" alt=""></div></div>
+				<div class="div3"><div class="headerSubmenu headerListSearch"><img src="images/icon-list.png" title="List all" alt=""></div></div>
+				<div class="div3"><div class="headerSubmenu headerCategorySearch"><img src="images/icon-tag.png" title="Category search" alt=""></div></div>
+			</div>
+			<div class="screenBody">
+			<div class="headerBottom"><div class="headerBottomContainer"><h2>Head</h2></div></div>
+					<img src="images/head-outline-male.png" alt="" usemap="#bodymaphead" class="bodyMapImage" id="headMapImageDiv">
+                    <map name="bodymaphead">
+                      <area class="area2" shape="rect" coords="735,295,827,375" href="#nose" alt="nose" id="bodyMap1">
+                      <area class="area2" shape="rect" coords="682,386,833,478" href="#mouth" alt="mouth" id="bodyMap4">
+                      <area class="area2" shape="rect" coords="369,494,662,653" href="#neck" alt="neck" id="bodyMap5">
+                      <area class="area2" shape="rect" coords="396,244,525,418" href="#ear" alt="ear" id="bodyMap3">
+                      <area class="area2" shape="rect" coords="566,240,732,331" href="#eye" alt="eye" id="bodyMap2">
+                      <area class="area2" shape="poly" coords="277,194,271,243,510,237,777,224,754,129,673,29,330,19" href="#brain" alt="brain"  id="bodyMap7">
+                      <area class="area2" shape="poly" coords="532,331,678,338,679,481,592,479,528,478,529,397" href="#face" alt="face" id="bodyMap6">
+                    </map>
+					
+			</div>
+          </div>
+			
+			
+			
+			 <!----------------------------------------------------------------BODY MAP CONTENT-->
+           <div id="bodyMapContent" class="screen invisible">
+			<div class="screenHeader">
+				<div class="headerLeft backtomap active"><img src="images/icon-left.png" title="Back" alt="Back"></div>
+				<div class="headerCentre">
+					<img src="images/icon-search.png" title="Search" alt="Magnifying glass">
+					<div class="headerSearchBox"><input type="text" placeholder="Search" class="searchInput"></div>
+				</div>
+				<div class="headerRight langmenuButton"><img src="images/icon-lang.png" title="Change language" alt="3 people"><div class="langFlag"></div></div>
+				<div class="div3 clearBoth"><div class="headerSubmenu headerPictureSearch"><img src="images/icon-body.png" title="Picture search" alt=""></div></div>
+				<div class="div3"><div class="headerSubmenu headerListSearch"><img src="images/icon-list.png" title="List all" alt=""></div></div>
+				<div class="div3"><div class="headerSubmenu headerCategorySearch"><img src="images/icon-tag.png" title="Category search" alt=""></div></div>
+			</div>
+			<div class="screenBody paddedContent">
+				<div class="headerBottom"><div class="headerBottomContainer"><h2></h2></div></div>
+				<div class="bodymapentries"></div>
+				</div>
+          </div>
+			
+			
+			
+			
+			
+			 <!----------------------------------------------------------------LIST ALL-->
+           <div id="fulllist" class="screen invisible">
+			<div class="screenHeader">
+				<div class="headerLeft menuButton"><img src="images/icon-menu.png" class="menuButtonIcon" title="Menu" alt="3 lines"></div>
+				<div class="headerCentre">
+					<img src="images/icon-search.png" title="Search" alt="Magnifying glass">
+					<div class="headerSearchBox"><input type="text" placeholder="Search" class="searchInput"></div>
+				</div>
+				<div class="headerRight langmenuButton"><img src="images/icon-lang.png" title="Change language" alt="3 people"><div class="langFlag"></div></div>
+				<div class="div3 clearBoth"><div class="headerSubmenu headerPictureSearch"><img src="images/icon-body.png" title="Picture search" alt=""></div></div>
+				<div class="div3"><div class="headerSubmenu headerListSearch"><img src="images/icon-list.png" title="List all" alt=""></div></div>
+				<div class="div3"><div class="headerSubmenu headerCategorySearch"><img src="images/icon-tag.png" title="Category search" alt=""></div></div>
+				
+				
+				
+			   </div>
+			<div class="screenBody paddedContent">
+				<div class="headerBottom">
+					<div class="headerBottomContainer">
+						<h2 class="half">English</h2><h2 class="half langmenuButton"><span class="langname">Dhuwal</span></h2><div class="clearBoth"></div>
+					</div>
+				</div>
+				<div class="entries"></div>
+			
+				
+			</div>
+          </div>
+			
+			
+			
+			 <!----------------------------------------------------------------CATEGORY-->
+           <div id="categorylist" class="screen invisible">
+			<div class="screenHeader">
+				<div class="headerLeft menuButton"><img src="images/icon-menu.png" class="menuButtonIcon" title="Menu" alt="3 lines"></div>
+				<div class="headerCentre">
+					<img src="images/icon-search.png" title="Search" alt="Magnifying glass">
+					<div class="headerSearchBox"><input type="text" placeholder="Search" class="searchInput"></div>
+				</div>
+				<div class="headerRight langmenuButton"><img src="images/icon-lang.png" title="Change language" alt="3 people"><div class="langFlag"></div></div>
+				<div class="div3 clearBoth"><div class="headerSubmenu headerPictureSearch"><img src="images/icon-body.png" title="Picture search" alt=""></div></div>
+				<div class="div3"><div class="headerSubmenu headerListSearch"><img src="images/icon-list.png" title="List all" alt=""></div></div>
+				<div class="div3"><div class="headerSubmenu headerCategorySearch"><img src="images/icon-tag.png" title="Category search" alt=""></div></div>
+			</div>
+			<div class="screenBody">
+				<div id="categoryentries"></div>
+			</div>
+          </div>
+			
+			
+         		
+			
+			 <!----------------------------------------------------------------DICTIONARY ENTRY-->
+           <div id="entry" class="screen invisible">
+			<div class="screenHeader">
+				<div class="headerLeft entryBack active"><img src="images/icon-left.png" title="Back" alt="Back"></div>
+				<div class="headerCentre">
+				<div class="headerSearchBox">
+					<img src="images/icon-search.png" title="Search" alt="Magnifying glass">
+					<input type="text" placeholder="Search" class="searchInput">
+				</div>
+				</div>
+				<div class="headerRight langmenuButton"><img src="images/icon-lang.png" title="Change language" alt="3 people"><div class="langFlag"></div></div>
+				<div class="div3 clearBoth"><div class="headerSubmenu headerPictureSearch"><img src="images/icon-body.png" title="Picture search" alt=""></div></div>
+				<div class="div3"><div class="headerSubmenu headerListSearch"><img src="images/icon-list.png" title="List all" alt=""></div></div>
+				<div class="div3"><div class="headerSubmenu headerCategorySearch"><img src="images/icon-tag.png" title="Category search" alt=""></div></div>
+				
+			</div>
+			<div class="screenBody ">
+				<div class="headerBottom">
+					<div class="headerBottomContainer paddedContent">
+						<div id="dictionaryheadentry"></div>
+					<div class="clearBoth"></div>
+					</div>
+				</div>
+				<div id="dictionaryentry"></div>	
+			</div>
+          </div>
+			
+			
+			
+         
+          
+       
+            <!----------------------------------------------------------------ABOUT-->
+           <div id="about" class="screen invisible">
+				<div class="screenHeader">
+					<div class="headerLeft entryBack active"><img src="images/icon-left.png" title="Back" alt="Back"></div>
+					<div class="headerCentre">
+						<img src="images/icon-search.png" title="Search" alt="Magnifying glass">
+						<div class="headerSearchBox"><input type="text" placeholder="Search" class="searchInput"></div>
+					</div>
+					<div class="headerRight langmenuButton"></div>
+					<div class="div3 clearBoth"><div class="headerSubmenu headerPictureSearch"><img src="images/icon-body.png" title="Picture search" alt=""></div></div>
+					<div class="div3"><div class="headerSubmenu headerListSearch"><img src="images/icon-list.png" title="List all" alt=""></div></div>
+				<div class="div3"><div class="headerSubmenu headerCategorySearch"><img src="images/icon-tag.png" title="Category search" alt=""></div></div>
+					
+				</div>
+			 <div class="screenBody paddedContent">
+				 <div class="headerBottom">
+						<div class="headerBottomContainer">
+							<h2>Rumbalpuy Dhäwu<br><em>Stories about the body</em></h2>
+							
+						</div>
+					</div>
+				 <p><strong>Version: 1.0.2</strong></p>
+				 <p>This app is an adaptation of the bilingual print dictionary, “<em>Dictionary of Anatomy: Dhäruk Mala ga Mayali' Rumbalpuy</em>", (ARDS Inc., 2009). This app edition contains audio, some revisions of the original content and some translations from Dhuwal into Dhuwala and Dhaŋu. When the print dictionary was published, it was the first of its kind in an Aboriginal language. For many Yolŋu users, the information was new. We hope that this audio app will make this information even more accessible.</p>
+				 <p>The app has two main aims:</p>
+				 <ol>
+					 <li>The first is to make Western understandings about health and medical terminology available in Yolŋu languages. The app is not a substitute for an interpreter working with a medical professional, but it is a start to being able to explain terminology and Western conceptualisations of the body in language that makes sense to Yolŋu.</li>
+					 <li>The second aim is to support maintenance of Yolŋu languages. This was a deliberate choice made by the translators. Where possible they have used specialised Yolŋu terminology to translate the specialised English terminology. The aim is to support continued use of these Yolŋu terms, many of which are not everyday terms. In other instances, the Yolŋu terms are coinages, just as they were coined originally in English. For example, DNA is translated as djinaga'puy wäyuk, meaning ‘law of the inside’ or more literally ‘upper arm of the inside’. These translation choices were made in order to help Yolŋu languages to stay vibrant through use in all areas of life.</li>
+				 </ol>
+				 <p><strong>Issues of pragmatics:</strong> It is important to note that Yolŋu have different ways of talking about health issues, not just different words. In the Western medical sphere, many professionals value directness and discussion of risk. In contrast, many Yolŋu will choose to galipum waŋa, or 'talk circuitously' when talking about a sensitive topics, for example cancer, women’s health, certain digestive functions.  This is in order not to ŋayaŋu-wutthun, 'hit the inner being' of the ailing person. It should be stressed that some Yolŋu do prefer a direct approach when it comes to medical information. In any case, users should be aware that some entries are not told in the most sensitive way for many Yolŋu, despite having been translated into the languages.</p>
+				 <p><strong>About the languages used in this app:</strong> The names Dhuwal, Dhaŋu and Dhuwala are terms used to identify groups of Yolŋu clan languages by their respective terms for 'this'. Not all of the Yolŋu languages are represented in this app. This app uses the clan languages of Djambarrpuyŋu (Dhuwal), Gälpu (Dhaŋu) and Gumatj (Dhuwala).  We acknowledge that there are many, many more Indigenous languages across Australia that are not yet available on this app. We hope that English-speaking users from many backgrounds can also benefit from the Plain English explanations of the medical terminology available here.</p>
+				 <p><strong>Choosing languages in this app:</strong> Most Yolŋu are multilingual. If you are trying to help someone use this app and you are not sure which language to choose, just let them know that there is information available in Dhuwal, Dhuwala and Dhaŋu, and they'll tell you which language would suit them best. It would also help to advise them that not all the entries are translated into Dhuwala and Dhaŋu yet, and that the app will play the Dhuwal if there is no Dhuwala or Dhaŋu translation available. </p>
+				 <p><strong>The app is fully functional offline</strong>: When connected to the internet, the latest updates will be synchronised with your phone, using only a small amount of data.</p>
+				 <p><strong>Future directions:</strong> We value your feedback towards continually refining and growing this app.  Subject to funding, ARDS hopes to complete the translation of the dictionary into Dhaŋu and Dhuwala, to record English audio, to include other languages, to include direct and alternative ways to discuss sensitive topics, and to include more entries.</p>
+				 <p><strong>With thanks to:</strong></p>
+				 <p>The Australian Government Department of Communications and the Arts’ <strong>Indigenous Languages and Arts (ILA) program</strong>.</p>
+				 <p><strong>Original Dhuwal translations:</strong> Yurranydjil Dhurrkay, Marilyn McLellan, Mätjarra Garrawurra</p>
+				 <p><strong>Medical consultation:</strong> Dr Alyssa Vass (MBBS MICD), Alice Mitchell (RN/RM), Dr Jamie Mapleson (MBBS)</p>
+				 <p><strong>Testing, review and adaptation of original print resource:</strong> Yirriṉiṉba Dhurrkay, Stuart Yiwarr McGrath, Yurranydjil Dhurrkay, Mayalil Marika, Salome Harris, Joy Bulkanhawuy Dhamarranydji, Hannah Harper</p>
+				 <p><strong>Cultural advisers:</strong> Gawura Wanambi, Joy Bulkanhawuy, Yirriṉiṉba Dhurrkay, Yurranydjil Dhurrkay, Djawuṯ Goṉḏarra, Sylvia Ŋulpinditj</p>
+				 <p><strong>Dhaŋu and Dhuwala translations:</strong> Yirriṉiṉba Dhurrkay, Mayalil Marika, Wayalwaŋa Marika, Leanna Djerrkŋu II Yunupiŋu</p>
+				 <p><strong>Voice talent: </strong>Stuart McGrath, Yirriṉiṉba Dhurrkay, Mayalil Marika, Yurranydjil Dhurrkay, Djawuṯ Goṉḏarra, Steven Dhurrkay, Joey Bulungitj Wunungmurra, Janice Mundhu Ganambarr, Muḏaltjiwuy Gaykamaŋu, Lucinda Waṉḏawuy Dhirrinybulwuy, Martha Pachos.</p>
+				 <p><strong>Studio operation:</strong> Daniel Guruguru Hick, Hannah Harper, Salome Harris, Lucinda Waṉḏawuy Dhirrinybulwuy, Martha Pachos, Andrew Grimes</p>
+				 <p><strong>Sound editing:</strong> Daniel Guruguru Hick, Hannah Harper, Andrew Grimes, Salome Harris, Guluŋgulk Wanambi, Alex Bowen, Lucinda Waṉḏawuy Dhirrinybulwuy</p>
+				 <p><strong>Mastering:</strong> Kris Keogh</p>
+				 <p><strong>Diagrams:</strong> Greg Stehle, Eileen O'Connor</p>
+				 <p><strong>App icon and front page images:</strong> Trevor van Weeran</p>
+				 <p><strong>Photographic model:</strong> Paige Shreeve</p>
+				 <p><strong>App development and design:</strong> Sarah Bock, eLearn Australia</p>
+				 <p><strong>Coordination:</strong> Salome Harris, Hannah Harper, Daniel Guruguru Hick, Andrew Grimes</p>
+				 <img src="images/ardslogo.jpg" alt="ARDS Aboriginal Corporation Creative media and communication specialists" class="aboutLogo">
+				 <img src="images/ilalogo.jpg" alt="Indigenous Languages and Arts (ILA) program" class="aboutLogo">
+			   </div>
+		  </div>
+					
+        
+			
+           
+         
+					       
+            <!----------------------------------------------------------------TERMS-->
+           <div id="terms" class="screen invisible">
+				<div class="screenHeader">
+					<div class="headerLeft entryBack active"><img src="images/icon-left.png" title="Back" alt="Back"></div>
+					<div class="headerCentre">
+						<img src="images/icon-search.png" title="Search" alt="Magnifying glass">
+						<div class="headerSearchBox"><input type="text" placeholder="Search" class="searchInput"></div>
+					</div>
+					<div class="headerRight langmenuButton"></div>
+					<div class="div3 clearBoth"><div class="headerSubmenu headerPictureSearch"><img src="images/icon-body.png" title="Picture search" alt=""></div></div>
+					<div class="div3"><div class="headerSubmenu headerListSearch"><img src="images/icon-list.png" title="List all" alt=""></div></div>
+				<div class="div3"><div class="headerSubmenu headerCategorySearch"><img src="images/icon-tag.png" title="Category search" alt=""></div></div>
+					
+				</div>
+			 <div class="screenBody paddedContent">
+				 <div class="headerBottom">
+						<div class="headerBottomContainer">
+							<h2>Terms of use</h2>
+							
+						</div>
+					</div>
+				 <p>WARNING: This may contain audio of deceased people. Please notify us if you would like to have such material removed.</p>
+				 <p>The information provided in this app is provided to help Yolŋu better access Balanda medical knowledge and to support effective communication between medical professionals, interpreters and patients. It is not a substitute for a medical professional working with a qualified interpreter. </p>
+				 <p>You should not act on the basis of anything contained in this app without seeking independent professional medical advice. If you have any concerns about your health, consult your general practitioner.</p>
+				 <p>No responsibility or liability whatsoever can be accepted by ARDS Aboriginal Corporation for any loss, damage, injury, or liabilities of any kind that may arise from you acting on health information contained in this app and all such liabilities are expressly disclaimed.</p>
+				 <p><em>Adapted from Menzies' Health Lab Terms and Conditions</em></p>
+				 <p>Go to <a href="https://ards.com.au/resources/app-feedback/privacy-policy/" class="privacy">Privacy policy</a></p>
+
+			   </div>
+		  </div>
+					
+          
+	<!----------------------------------------------------------------HAMBURGER MENU-->
+           <div id="menu" class="popup invisible">
+			<div class="popupBody">
+			<div class="popupBodyText">
+				<div class="menuHeader">
+				<div class="menuHeaderName">Menu</div>
+				</div>
+				<div class="menuBody">
+				<div class="menuBodyItem" id="aboutButton">
+				<div class="menuBodyItemLeft"><img src="images/icon-info.png" class="menuBodyItemIcon" title="Info" alt="information"></div>
+				<div class="menuBodyItemRight">About</div>
+				<div class="clearBoth"></div>
+				</div>
+				<div class="menuBodyItem" id="disclaimerButton">
+				<div class="menuBodyItemLeft"><img src="images/icon-contract.png" class="menuBodyItemIcon" title="Terms and conditions" alt="contract"></div>
+				<div class="menuBodyItemRight">Terms of use</div>
+				<div class="clearBoth"></div>
+				</div>
+				<div class="menuBodyItem" id="feedbackButton">
+				<div class="menuBodyItemLeft"><img src="images/icon-lightbulb.png" class="menuBodyItemIcon" title="Feedback" alt="lightbulb"></div>
+				<div class="menuBodyItemRight">Feedback and suggestions</div>
+				<div class="clearBoth"></div>
+				</div>
+					<div class="menuSpace"></div>
+				<div class="menuHeader2">
+				<div class="menuHeaderName">Change dictionary</div>
+				</div>
+				<div class="menuBodyItem2" id="gend_All">
+				<div class="menuBodyItemLeft"><img src="images/icon-body.png" title="For everybody" alt="Man and woman" class="menuBodyItemIcon"></div>
+				<div class="menuBodyItemRight">Bukmakku / For everybody</div>
+				<div class="clearBoth"></div>
+				</div>
+				<div class="menuBodyItem2" id="gend_Men">
+				<div class="menuBodyItemLeft"><img src="images/icon-body-male.png" title="For men only" alt="Man" class="menuBodyItemIcon"></div>
+				<div class="menuBodyItemRight">Ḏirramuw / For men only
+					<div class="menuBodyItemCode" id="maleCodeHolder">
+						<input type="password" placeholder="password?" id="maleCode">
+						<div class="menuBodyItemCodeOK" id="maleCodeOK">OK</div>
+						<p>Please contact ARDS at feedback@ards.com.au or on <a href="tel:0889844174">(08) 8984 4174</a> for password.</p>
+					</div> 
+					
+				</div>
+
+				<div class="clearBoth"></div>
+				</div>
+				<div class="menuBodyItem2" id="gend_Wom">
+				<div class="menuBodyItemLeft"><img src="images/icon-body-female.png" title="For women only" alt="Woman" class="menuBodyItemIcon"></div>
+				<div class="menuBodyItemRight">Miyalkku / For women only
+					<div class="menuBodyItemCode" id="femaleCodeHolder">
+						<input type="password" placeholder="password?" id="femaleCode">
+						<div class="menuBodyItemCodeOK" id="femaleCodeOK">OK</div>
+						<p>Please contact ARDS at feedback@ards.com.au or on <a href="tel:0889844174">(08) 8984 4174</a> for password.</p>
+					</div> 
+				</div>
+				<div class="clearBoth"></div>
+				</div>
+					
+
+				<div class="menuSpace"></div>
+			</div>
+			</div></div>
+          </div>
+			
+			<!----------------------------------------------------------------LANGUAGE MENU-->
+			<div id="langmenu" class="popup invisible">
+				<div class="popupBody">
+				<div class="popupBodyText">
+
+					<div class="menuHeader">
+					<div class="menuHeaderName">Language / Dhäruk</div>
+					</div>
+					<div class="menuBody">
+					<div class="menuBodyItem yellow" id="lang_Djamb">
+					<div class="menuBodyItemLeft"><img src="images/icon-lang.png" title="Change language" alt="3 people"></div>
+					<div class="menuBodyItemRight">Dhuwal</div>
+					<div class="clearBoth"></div>
+					</div>
+					<div class="menuBodyItem" id="lang_Gum">
+					<div class="menuBodyItemLeft"><img src="images/icon-lang.png" title="Change language" alt="3 people"></div>
+					<div class="menuBodyItemRight">Dhuwala</div>
+					<div class="clearBoth"></div>
+					</div>
+					<div class="menuBodyItem" id="lang_Dha">
+					<div class="menuBodyItemLeft"><img src="images/icon-lang.png" title="Change language" alt="3 people"></div>
+					<div class="menuBodyItemRight">Dhaŋu</div>
+					<div class="clearBoth"></div>
+					</div>
+					<div class="menuSpace"></div>
+				</div></div>
+				</div></div>
+
+	
+         
+		 <!-- ------------------------------------------------------------- IMAGE -->
+		<div id="image" class="popup invisible">
+			<div class="popupBody">
+				<div class="popupBodyText centred">
+				<div id="imageClose"><img src="images/icon-close.png" alt="close"></div>
+				<img src="images/_blank.png" alt="" id="imageEnlarge">
+				</div>
+			</div>
+		</div>
+			
+			
+		
+        
+         
+         	<!----------------------------------------------------------------SUCCESS-->
+		<div id="success" class="popup invisible"><div class="popupBody successBody">
+		</div></div>
+          
+          
+        
+          <!----------------------------------------------------------------ERROR-->
+		<div id="error" class="popup invisible"><div class="popupBody successBody">
+		</div></div>
+          
+          
+          <!----------------------------------------------------------------ALERT-->
+		 <div id="alert" class="popupAlert invisible"><div class="popupBody">
+			<div id="alertTextHolder">
+				<span id="alertText">Text</span>
+				<div id="alertOK" class="button greenButton buttonCentre">OK</div>
+			</div>
+			<div class="clearBoth"></div>
+			</div></div>
+
+		<!----------------------------------------------------------------SEARCH RESULT-->
+		<div id="headerSearchResult" style="display: none;">
+			<div id="searchresults"></div>
+		</div>
+			
+		<!----------------------------------------------------------------Loading-->
+		 <div id="loading" class="popup invisible">
+			 <div class="popupBody">
+			
+			</div>
+		</div>
+			
+			
+		
+			
+			
+        </div><!--end appHolder-->
+		
+                
+                
+        <script type="text/javascript" src="js/jquery.js"></script>
+       <script type="text/javascript" src="js/jquery.rwdImageMaps.min.js"></script>
+		<script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js?39"></script>
+        <script type="text/javascript" src="js/hammer.min.js"></script><!--For swipe detetcion-->
+        <script type="text/javascript" src="js/fastclick.js"></script>
+		<script type="text/javascript" src="js/dictionary.js?2"></script>
+		
+		
+
+       <audio preload="none" controls id="audioPlayer" onloadeddata="checkLoadedAudio();"><source src="" id="mp3Source" type="audio/mpeg"></audio>
+      <div class="preloadContainer"><img src="images/audio_on.png" alt=""><img src="images/body-outline-female.png" alt=""><img src="images/body-outline-male.png" alt=""><img src="images/head-outline-female.png" alt=""><img src="images/audio_off.png" alt=""></div>
+       
+    </body>
+</html>
