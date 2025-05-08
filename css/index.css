@@ -1,42 +1,42 @@
-@font-face{ 
-	font-family: 'Aleo';
-	src: url('../webfonts/Aleo-Regular-webfont.woff') format('woff');
+@font-face{
+    font-family: 'Aleo';
+    src: url('../webfonts/Aleo-Regular-webfont.woff') format('woff');
 }
 
-@font-face{ 
-	font-family: 'Open Sans';
-	src: url('../webfonts/OpenSans-Regular-webfont.woff') format('woff');
+@font-face{
+    font-family: 'Open Sans';
+    src: url('../webfonts/OpenSans-Regular-webfont.woff') format('woff');
 }
 
-@font-face{ 
-	font-family: 'Open Sans';
-	src: url('../webfonts/OpenSans-Bold-webfont.woff') format('woff');
-	font-weight: bold;
+@font-face{
+    font-family: 'Open Sans';
+    src: url('../webfonts/OpenSans-Bold-webfont.woff') format('woff');
+    font-weight: bold;
 }
 
 
 
-html {height:100vh;}
+html {height:100%; overflow:hidden;}
 body {
-    -webkit-text-size-adjust: none;            
+    -webkit-text-size-adjust: none;
     font-family: 'Open Sans', sans-serif; font-weight:400;
-    height:100vh;
+    height:100%;
     padding:0; margin:0;
-	color: #000000;
+    color: #000000;
 }
 
-#appHolder { background-color:#FAFAFA; height:100vh; text-align: left; position:absolute; left:0px;  top:0px;right:0px; bottom:0px; padding:0; 
+#appHolder { background-color:#FAFAFA; height:100%; text-align: left; position:absolute; left:0px;  top:0px;right:0px; bottom:0px; padding:0;
 }
 #audioPlayer {float:left; height:0; visibility:hidden;}
 .audioIcon {height:1.2em; width:auto; margin-right:0.3em; max-width:20%;float:left;}
 #entry .entryHeader .audioIcon{vertical-align:middle; float:none;}
 .preloadContainer, #preloadImage{visibility:hidden; position:absolute; top:-10000px;left:-100000px;}
 
-.screen {height:100vh; width:100vw; position: absolute; top:0; left:0; background-color:#E9E9E9; }
+.screen {height:100vh;  width:100vw; position: absolute; top:0; left:0; background-color:#E9E9E9; }
 
 
 /*LAUNCH*/
-#launch{background-color: #D70811; display: flex; align-items: center; justify-content: center; height:100vh;   position: relative; 
+#launch{background-color: #D70811; display: flex; align-items: center; justify-content: center; height:100%;   position: relative;
 }
 .launchlogo{width: 90%;}
 
@@ -46,7 +46,7 @@ body {
 .clearBoth{clear:both;}
 h1{   font-family: "Aleo","Helvetica","Arial",Sans-Serif; font-size: 7vh; letter-spacing: 0; margin:0; padding:0; text-align: center; font-weight:400; color: #D70811;}
 h2{ font-family: "Aleo","Helvetica","Arial",Sans-Serif; font-size: 1.2em;letter-spacing: 0; margin:0; font-weight:400; text-align: left;  padding: 1em 0 0 3%; }
-h2.half{width: 40%; float:left; text-align: left !important;} 
+h2.half{width: 40%; float:left; text-align: left !important;}
 h3{margin:0; padding:0;  text-align: center; font-weight:400;}
 .label{font-size: 1em; color: #0B0B14; letter-spacing: 0;font-weight: 400; } .largelabel{font-size:1.2em;    font-size: 20px;}
 .secondary {font-size: 1em; color: #333333; letter-spacing: 0;}
@@ -54,7 +54,7 @@ h3{margin:0; padding:0;  text-align: center; font-weight:400;}
 p{font-size: 1em; letter-spacing: 0; line-height: 29px;}
 a{font-size: 1em; color: #862827; letter-spacing: 0;}
 input, select, textarea, option {font-family: 'FontAwesome', 'Open Sans', sans-serif; font-weight:400;font-size: 1em; color: #989898; letter-spacing: 0; border-radius: 3px; width: 95%; padding: 2%;  }
-.emailInput::-webkit-input-placeholder , .passwordInput::-webkit-input-placeholder { text-align:right; } 
+.emailInput::-webkit-input-placeholder , .passwordInput::-webkit-input-placeholder { text-align:right; }
 select{width: 100%;     -webkit-appearance: none;     height: 2.2em;}
 textarea{height:4em;} #storyText{height:5em;} .textInput{height: 1.5em;}
 
@@ -85,12 +85,12 @@ hr{ display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin:0
 
 /*language*/
 #language{background-color:#E9E9E9;}
-.languageHeader{height:32vh;     overflow: hidden;}
-.languageHeader h1{padding-top:6vh;}
-.languageSubHeader{min-height: 16vh; } 
-.languageSubHeader h2{padding-top:5vh;     text-align: center;}
-.languageBody{min-height:40vh;} 
-.languageFooter{min-height:12vh;}
+.languageHeader{height:32%;     overflow: hidden;}
+.languageHeader h1{padding-top:6%;}
+.languageSubHeader{min-height: 16%; }
+.languageSubHeader h2{padding-top:5%;     text-align: center;}
+.languageBody{min-height:35%;}
+.languageFooter{min-height:12%;}
 .or {text-align: center; position: relative; top:-0.6em;} .orText{background-color: #FAFAFA; width:10px; padding:0 10px; margin-left:auto; margin-right:auto;}
 
 
@@ -100,13 +100,13 @@ hr{ display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin:0
 #gen2_Wom { background-image: url(../images/icon-body-female-off.png); }
 
 /*ALERTS and POPUPS*/
-.popup{display: flex; align-items: center; justify-content: center; height:100vh; background-color: hsla(0,0%,0%,0.7);    position: relative; }
-.popupCamera, .popupAlert{height:100vh; width:100vw; position: absolute; top:0; left:0; background-color: hsla(0,0%,0%,0.7);     max-width: 500px;}
+.popup{display: flex; align-items: center; justify-content: center; height:100%; background-color: hsla(0,0%,0%,0.7);    position: relative; }
+.popupCamera, .popupAlert{height:100%; width:100vw; position: absolute; top:0; left:0; background-color: hsla(0,0%,0%,0.7);     max-width: 500px;}
 
-.popupImageHolder{text-align: center;position: relative; top: -39px;} 
+.popupImageHolder{text-align: center;position: relative; top: -39px;}
 .popupImage{width:78px; height:auto; margin-left:auto; margin-right:auto;}
-.popupBody{ background-color: #FFF;width: 80vw;} 
-.popupCamera .popupBody{margin-left: 10vw;margin-top: 10vh;} 
+.popupBody{ background-color: #FFF;width: 80vw;}
+.popupCamera .popupBody{margin-left: 10vw;margin-top: 10vh;}
 .popupAlert .popupBody{margin-left: 5vw; margin-top: 5vh; height:90vh; width: 90vw;   }
 .popupBody h2{font-weight:500; color:#0B0B14; padding: 20px 0;margin: 0;}
 .popupBody h3{font-weight:500; color:#0B0B14; margin: 10px 0;}
@@ -114,9 +114,9 @@ hr{ display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin:0
 .successBody{background:none; width:200px;}
 .successImg{width:90%; height: auto;}
 #alertTextHolder{padding:10%; overflow:auto; overflow-y: scroll;  -webkit-overflow-scrolling: touch;     word-break: break-word;     max-height: 80vh;}
-#alertText{font-weight: 400; } 
-#alertTextHolder::-webkit-scrollbar { width: 0 !important;     display: none; } 
-#loading{background: none; align-items: flex-start; padding-top: 23vh;} #loading .popupBody {background: none;}  #loading .popupBody {text-align: center;} #loading .popupBody img{width: 10vh; height: auto;} 
+#alertText{font-weight: 400; }
+#alertTextHolder::-webkit-scrollbar { width: 0 !important;     display: none; }
+#loading{background: none; align-items: flex-start; padding-top: 23vh;} #loading .popupBody {background: none;}  #loading .popupBody {text-align: center;} #loading .popupBody img{width: 10vh; height: auto;}
 
 /*IMAGE POPUP*/
 #image {background-color: #FFFFFF;}
@@ -125,8 +125,8 @@ hr{ display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin:0
 #imageClose{background-color: #ffb91a; position: absolute; top: 0; right: 0; cursor: pointer; padding: 10px 20px; width: 10vw; height: auto; max-width: 40px;}
 
 /*GENERAL SCREENS min-height: 145px; */
-.screenHeader{height: 14vh;  text-align: center;     }
-.screenHeaderBack{position: absolute; top: 0; left: 0; cursor: pointer; padding: 3vh 20px; }
+.screenHeader{height: 14%;  text-align: center;     }
+.screenHeaderBack{position: absolute; top: 0; left: 0; cursor: pointer; padding: 3% 20px; }
 .screenHeaderBackIcon{color: #FFF; font-size: 2em; }
 .screenHeader h2{text-align: center;}
 
@@ -135,18 +135,18 @@ hr{ display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin:0
 .headerRight{float:left; text-align: left; padding:0 2vw 0 0; width: 18vw;}
 .headerRight .langFlag{font-size: 15px;font-family: 'Open Sans', sans-serif; font-weight:400; height: 7vh; line-height: 7vh; text-align: right; cursor: pointer; text-decoration: underline;}
 .headerRight img, .headerLeft img{    height: 3vh; margin-top:2vh;} .headerRight img{display: none;}
-.headerCentre img{height: 3vh; position: absolute; right: 28vw; top: 1.8vh; opacity: 0.3;	}
-.headerSubmenu{height: 7vh;} 
+.headerCentre img{height: 3vh; position: absolute; right: 28vw; top: 1.8vh; opacity: 0.3;    }
+.headerSubmenu{height: 7vh;}
 .headerSubmenu img{   height: 5vh; margin-top: 1vh;}
 .headerPictureSearch{background-color: #FF4C00;}
 .headerSearchBox {  margin-top: 1vh;}
 .headerSearchBox input{width:80%;border-radius:1em;     max-height: 3vh; border: 0;}
-.headerBottom{ background-color:#E9E9E9;  } 
+.headerBottom{ background-color:#E9E9E9;  }
 
-.screenBody{height:86vh;  text-align: center; overflow:auto; overflow-y: scroll;  -webkit-overflow-scrolling: touch;} 
-.screenBody::-webkit-scrollbar { width: 0 !important;     display: none; } 
+.screenBody{height:86%;  text-align: center; overflow:auto; overflow-y: scroll;  -webkit-overflow-scrolling: touch;}
+.screenBody::-webkit-scrollbar { width: 0 !important;     display: none; }
 .screenBody::-webkit-scrollbar-thumb { background: #FF0000;}
-.screenFooter{height: 5vh;
+.screenFooter{height: 5%;
     position: fixed;
     left: 0;
     bottom: 0;
@@ -171,7 +171,7 @@ hr{ display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin:0
 .entry, .topic{background-color: #FFF;   text-align: left;     margin-bottom: 1em;}
 .entryHeader{background: none; border: 0; width: 90%; margin-left:5%; margin-right:5%;    padding-top: 3vh; }
 .entryEnglish{float:left; width:35%; padding: 0.5em 0 0.5em 5%;     hyphens: auto; word-break: break-word;}
-.entryYolngu{float:left; width:40%; padding: 0.5em 5% 0.5em 5%; color:#862827;     hyphens: auto; word-break: break-word;}
+.entryYolngu{float:left; width:43%; padding: 0.5em 2% 0.5em 5%; color:#862827;     hyphens: auto; word-break: break-word;}
 .langNotAvail .entryGo{background-color: #ccc;}
 
 .entryHalf{width:50%; margin: 0;padding: 0;}
@@ -182,8 +182,9 @@ hr{ display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin:0
 .headerBottomContainer h2{ font-size:1.3em; font-weight: normal;  padding: 1em 0 1em 5%; margin:0; text-align: center;}
 .headerEnglish, .headerYolngu{  float: left; width: 40%; padding: 0.5em 5% 0.5em 5%; text-align: left;}
 .headerYolngu{}
-#entry .headerEnglish, #entry .headerYolngu {    width: 50%; padding: 0.5em 0 0.5em 0;}
-.headerPrefLang {    clear: both; color: #000; font-size: 0.8em;  background-color: #CCC;  padding: 0.5em 0;}
+#entry .headerEnglish{    width: 35%; padding: 0.5em 5% 0.5em 0;}
+#entry .headerYolngu {    width: 55%; padding: 0.5em 0 0.5em 5%;}
+.headerPrefLang {    clear: both; color: #000; font-size: 0.8em;  background-color: #CCC;     padding: 0.5em;  margin-bottom: 1em;}
 
 #bodyMapContent .entry,  #fulllist .entry, #categorylist .entry{margin: 0; margin-bottom: 0.5em;}
 #categorylist .entry{padding:5px; margin:0; border-bottom: 1px solid #ffb91a;}
@@ -191,7 +192,7 @@ hr{ display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin:0
 #entry .entryHeader{width: 100%;margin: 0; padding: 0; }
 #entry .entryHeader .entryEnglish {width:42%;}
 #entry .entryLeft{float:left; width:7%; padding-left:3%; text-align: left; }
-#entry .screenBody .entry .entryYolngu{background-color: #FFF;    width: 50%; }
+#entry .screenBody .entry .entryYolngu{background-color: #FFF;    width: 50%;     padding-right: 5%; }
 #entry .screenBody .entry .entryEnglish{background-color: #EAD8D8;     width: 30%; padding-right: 5%; }
 
 .anatomyImage{    max-height: 30vh;max-width: 100%;}
@@ -199,7 +200,7 @@ hr{ display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin:0
 .entryCatHolder{}
 .entryCat{float:left;  cursor: pointer; height: 5vh;     font-size: 0; }
 .entryCat img{   height: 3vh; padding-top: 1vh;}
-.col2{width:50%;} .col3{width: 28%; margin-right: 2%;} 
+.col2{width:50%;} .col3{width: 28%; margin-right: 2%;}
 .backgroundAnatomy {background-color: #862827; }
 .backgroundPathology {background-color:#FF4C00; }
 .backgroundProcedure {background-color: #ff4c00;}
@@ -207,7 +208,7 @@ hr{ display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin:0
 .entryAnatomy {    border-top: 1em solid #862827; }
 .entryPathology {border-top: 1em solid #FF4C00; }
 .entryProcedure {border-top: 1em solid #ff4c00; }
-.speakerDiv{margin-top: 3em;text-align: right;}
+.speakerDiv{margin-top: 3em;text-align: right; margin-bottom:50px;}
 
 /*DASHBOARD*/
 #dashboard, #bodyMapHead{background-color: #FFF;}
@@ -224,7 +225,7 @@ hr{ display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin:0
 
 /*SEARCH*/
 #headerSearchResult{
-	position: absolute;
+    position: absolute;
     top: 7vh;
     left: 10%;
     width: 80%;
@@ -254,13 +255,13 @@ hr{ display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin:0
 .dashboardIconText{cursor: pointer; width:80vw; margin:auto; font-size: 1em; min-height: 3em;     hyphens: auto;}
 
 /*Body map*/
-.bodyMapDiv{position: absolute; width: 100vw; left: 0; }
-.bodyMapImage{height: 60vh; width: auto; margin-top: 10vh; }
+.bodyMapDiv{position: absolute; width: 100vw; left: 0; height:100%; }
+.bodyMapImage{height: 60%; width: auto; margin-top:10%; }
 #headMapImageDiv{height: auto; width: 100vw;     margin-top: 2vh;}
 .switchOn, .switchOff{background-color: #F1D464; height: 4vh; text-align: center; cursor: pointer; padding-top: 1vh; color: #FFF;}
 .switchOff{background-color: #53b8b2;  }
 
-.bodymapentries, .entries{margin-bottom: 3em;}
+.bodymapentries, .entries{padding-bottom: 100px;}
 
 /*MENU*/
 #menu, #langmenu{align-items: flex-start; justify-content: flex-start;} #langmenu{justify-content: flex-end;}
@@ -273,7 +274,7 @@ hr{ display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin:0
 .menuBodyItem, .menuBodyItem2{border-bottom:1px solid #D7D7D7; cursor: pointer; padding: 3% 0;  }
 .menuBodyItemLeft, .menuBodySubItemLeft{float:left; text-align: center; width:15%;padding-top: 1%;}
 .menuBodySubItemLeft{width:20%; text-align: right;}
-.menuBodyItemIcon{width: 50%;} 
+.menuBodyItemIcon{width: 50%;}
 .menuBodyItemRight {color: #0B0A12; font-size:1.3em; width:80%; padding-right: 5%; float:right;font-weight: 300;}
 .menuBodyItemCode{ display: none;}
 .menuBodyItemCode input{     float: left; height: 3em; width: 70%; max-height: 3em; margin: 0; padding:0; border: 0; text-align: center;background-color: #e9e9e9;}
@@ -293,7 +294,7 @@ hr{ display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin:0
 
 
 .whiteBg{background-color: #FFF;} .noBg{background: none;}
-.noteBottom{margin-bottom: 2em; text-align: left;}
+.noteBottom{margin: 1em; text-align: left;}
 .paddedContent{width:90vw; margin-left:5vw; margin-right:5vw;}
 .active {cursor: pointer;}
 .leftItem{float:left; width:80%;}
@@ -309,7 +310,7 @@ hr{ display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin:0
 .yellow{background-color: #ffb91a;}
 .grey{background-color:#F5F5F5;}
 .highlightText{color:#0f6353;} .light{font-weight: 100; font-style: italic;}
-.highlightBox{background-color: #eee;  margin:1em 0 2em 0; padding:1em; } 
+.highlightBox{background-color: #eee;  margin:1em 0 2em 0; padding:1em; }
 .highlightBox2{background-color: #eee; margin: 2em 0;padding: 1em 1em 2em 1em;}
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
@@ -319,6 +320,7 @@ hr{ display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin:0
 /*hide when publishing mobile app
 #container{ max-width: 500px;}
 #appHolder{    max-width: 500px; margin: 0 auto; border: 1px solid #333;}*/
+
 
 
 

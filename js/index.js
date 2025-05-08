@@ -5,14 +5,14 @@ var startscreen="launch"; //for testing web version
 var currentpage=""; var referrer="dashboard"; //which page to go back to?
 var selectedlang="Djamb"; var selectedgender="All"; var selectedEntry=1; var selectedBodyMap=""; var selectedBodyTitle="";
 
-var audiopathServer="https://yourserver/mp3/v1/";
+var audiopathServer="https://api.ards.com.au/mp3/v1/";
 var audiopath="mp3/"; var audioError=0;
 //audiopath=audiopathServer; //comment this in final app
 var imagepath="anatomy/";
-var imagepathServer="https://yourserver/anatomy/v1/";
+var imagepathServer="https://api.ards.com.au/anatomy/v1/";
 //imagepath=imagepathServer; //comment this in final app
 var speakers=[]; var topics=[]; var dictionary=[]; 
-var malePassword=""; var femalePassword="";
+var malePassword="bilma5"; var femalePassword="nyalka4";
 
 
 						
@@ -20,7 +20,7 @@ var malePassword=""; var femalePassword="";
 
 function showPage(page){
 	"use strict";
-	currentpage=page; 
+	currentpage=page;   
 	//console.log(currentpage+" referred by: "+referrer);
 	$(".screen, .popup, #camera, #alert").css("display","none");
 	if (page==="launch"){
@@ -66,13 +66,14 @@ function showAlert(message){"use strict"; $("#alertText").html(message); $("#ale
 
 
 function getDictionary(){
+	initialiseDictionary();
 	"use strict";
-	$.getJSON("https://yourserver/entries.php", function(data) {if (data!==0) {dictionary=data;}})
+	/*$.getJSON("https://api.ards.com.au/entries.php", function(data) {if (data!==0) {dictionary=data;}})
 	.done(function() { 
 		//console.log("Dictionary: "+JSON.stringify(dictionary));
-		initialiseDictionary();
+		
 	})
-	.fail(function() {console.log("Updated dictionary data could not be retrieved."); initialiseDictionary();});
+	.fail(function() {console.log("Updated dictionary data could not be retrieved."); initialiseDictionary();});*/
 }
 
 function initialiseDictionary(){
@@ -94,11 +95,11 @@ function initialiseDictionary(){
 
 function getSpeakers(){
 	"use strict";
-	$.getJSON("https://yourserver/speakers.php", function(data) { if (data!==0) { speakers=data; } })
+	/*$.getJSON("https://api.ards.com.au/speakers.php", function(data) { if (data!==0) { speakers=data; } })
 	.done(function() { 
 		//console.log("Speakers: "+JSON.stringify(speakers));
 	})
-	.fail(function() {console.log("Speakers could not be retrieved.");});
+	.fail(function() {console.log("Speakers could not be retrieved.");});*/
 }
 
 function scrollToAnchor(aid){var aTag = $("a[name='"+ aid +"']"); $('#categorylist .screenBody').animate({scrollTop: aTag.offset().top},'slow');}
@@ -352,9 +353,9 @@ function setEntry(x){
 		$.get(imageFilePath) //check image exists
     	.fail(function() { 
 			//if image doesn't exist on the phone, check on the server for updates
-       		imageFilePath=imagepathServer+dictionary[n].image;
-			$("#dictionaryentry .anatomyImageDiv").data("img",imageFilePath);
-			$("#dictionaryentry .anatomyImage").attr("src", imageFilePath);
+       		//imageFilePath=imagepathServer+dictionary[n].image;
+			//$("#dictionaryentry .anatomyImageDiv").data("img",imageFilePath);
+			//$("#dictionaryentry .anatomyImage").attr("src", imageFilePath);
     	});
 		
 	}
@@ -412,7 +413,10 @@ function changeGender(gender){
 	"use strict";
 	selectedgender=gender; var genderstr="";
 	//if (typeof(Storage) !== "undefined") {localStorage.setItem("ards-gender", gender);} 
-	setTimeout(function() {$(".menuBodyItemCode").slideUp();}, 500);
+    setTimeout(function() {
+        $(".menuBodyItemCode").slideUp();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 500);
 	$("#menu .menuBodyItem2").css("background", "none");
 	$("#gender .genderButton").css("background-color", "#FFF");
 	$("#gend_"+gender+", #gen2_"+gender).css("background-color", "#FF4C00");
@@ -785,7 +789,7 @@ var app = {
         /*Put all plugin related calls in here*/
        
 		//access the text zoom set in phone and scale web view accordingly
-		MobileAccessibility.usePreferredTextZoom(true);
+		//MobileAccessibility.usePreferredTextZoom(true);
 		//function getTextZoomCallback(textZoom) {}
 		//MobileAccessibility.getTextZoom(getTextZoomCallback);
 		
@@ -826,7 +830,7 @@ $(document).ready(function(){
 	$(".menuHeader").click(function(){hidePopup();});
 	$("#disclaimerButton").click(function(){showPage("terms");});
 	$(".privacy").click(function(){location.href="https://ards.com.au/resources/app-feedback/privacy-policy/";});
-	$("#feedbackButton").click(function(){location.href="https://ards.com.au/resources/app-feedback/";});
+	$("#feedbackButton").click(function(){location.href="https://www.ards.com.au/contact";});
 	$("#aboutButton").click(function(){showPage("about");});
 	
 	
@@ -880,7 +884,10 @@ $(document).ready(function(){
 	//catch missing audio files
 	audioError=0;
 	$("#audioPlayer").on("error", function () {
-		var missingaudio=$("#audioPlayer").attr("src").substr(audiopath.length);
+		//don't check online files anymore
+		showAlert("<p style='text-align: center;'>Bäydhi napurr dhu waŋa, rirrakaymiriw.<br>No sound available, sorry.</p>");
+		$(".audioIcon").attr("src","images/audio_on.png");
+		/*var missingaudio=$("#audioPlayer").attr("src").substr(audiopath.length);
 		//try looking for the file online
 		if (audioError===0){
 			var filename=audiopathServer+missingaudio;
@@ -893,7 +900,7 @@ $(document).ready(function(){
 			 //$("#audioPlayer").attr("src").substr(audiopathServer.length));
 			$(".audioIcon").attr("src","images/audio_on.png");
 			audioError=0;
-		}
+		}*/
 	});
 	
 	
