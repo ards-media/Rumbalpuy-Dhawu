@@ -1,0 +1,30 @@
+# Android specific files
+*.apk
+*.ap_
+*.aab
+*.dex
+*.class
+*.so
+*.aar
+*.jar
+
+# Android Studio & Gradle
+.gradle/
+android/.gradle/
+android/app/build/
+.idea/
+build/
+captures/
+.externalNativeBuild/
+.cxx/
+local.properties
+
+# Configuration files
+*.iml
+*.hprof
+
+# macOS
+.DS_Store
+
+# npm
+node_modules
